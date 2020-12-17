@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div>
+    {% for row in data %}
+    <div class="card">
+            <h2>{{row.Name}}</h2>
+            <h5>Price: <span>{{row.Price}}</span></h5>
+            <h5>24 Hours: <span>{{row._24h}}</span></h5>
+            <h5>7 Days: <span>{{row._7d}}</span></h5>
+            <h5>Market Cap: <span>{{row.Market_Cap}}</span></h5>
+            <h5>Volume: <span>{{row.Volume}}</span></h5>
+            <h5>Circulating Supply: <span>{{row.Circulating_Supply}}</span></h5>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
